@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+.deck
+{
+	width:50%;
+	margin: 20px auto;
+	background:dodgerblue;
+	border:solid 10px black;
+	padding: 10px;
+	border-radius:10px;
+	text-align: center;
+	color:white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card
+{
+	padding: 10px;
+	border: solid 1px #808080;
+	background-color: white;
+	display: inline-block;
+	border-radius: 10px;
+	font-size: 14pt;
+	text-align: center;
+	color:black;
+	margin: 3px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* .btn
+{
+	background:white;
+	padding: 10px 20px;
+	border-radius:30px;
+	margin: 10px;
+	display:inline-block;
+} */
+
+.card .value{
+	font-size:15pt;
+	font-family: sans-serif;
+}
+
+.card .suit
+{
+	background-image: url('https://www.thatsoftwaredude.com/images/post/0f631eeb-6c4a-4bfd-9f86-e0a08ae8584b.png');
+	height: 100px;
+	width: 90px;
+}
+
+.card .diamonds
+{
+	background-position-y: 100px;
+}
+
+.card .hearts
+{
+	background-position-x: 90px;
+}
+
+.card .clubs
+{
+	background-position-x:90px;
+	background-position-y:100px;
+}
+
+div.hscreen{
+	min-height: 900px;
+}
+/* https://stackoverflow.com/questions/46907746/react-modal-animation-on-click */
+@keyframes modalFade {
+	from {transform: translateX(50%);opacity: 0;}
+	to {transform: translateX(0);opacity: 1;}
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .modal {
+	animation-name: modalFade;
+	animation-duration: 1s;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
